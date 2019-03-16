@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Reusable Form Demo</title>
+       <link rel="stylesheet" media="screen" href ="static/bootstrap.min.css">
+       <link rel="stylesheet" href="static/bootstrap-theme.min.css">
+       <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+ 
+    </head>
+    <body>
+ 
+ 
+<div class="container">
+ 
+ 
+  <h2>Potato Pricing Information</h2>
+  <form  action="" method="POST" role="form">
+    {{ form.csrf }}
+    <div class="form-group">
+      <label for="PotatoType">Potato Type:</label>
+      <input type="text" class="form-control" id="PotatoType" name="PotatoType" >
+      <br>
+      <label for="Quantity">Quantity:</label>
+      <input type="text" class="form-control" id="Quantity" name="Quantity">
+      <br>
+      <label for="Price">Price:</label>
+      <input type="text" class="form-control" id="Price" name="Price" placeholder="Enter per unit price">
+      <br>
+      <label for="CompanyName">Storage Company Name:</label>
+      <input type="text" class="form-control" id="CompanyName" name="CompanyName">
+      <br>
+      <label>Sources:</label>
+        <select name= Sources class="selectpicker form-control">
+            {% for source in sources %}
+            <option value= "{{source}}" SELECTED>{{source}}</option>"
+            {% endfor %}
+        </select>
+      <br>
+      <label for="AgentName">Contact Person:</label>
+      <input type="text" class="form-control" id="AgentName" name="AgentName">
+      <br>
+      <label for="ContactInfo">Contact Information:</label>
+      <input type="text" class="form-control" id="ContactInfo" name="ContactInfo">
+
+ 
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+ 
+  <br>
+
+</div>
+<br>            
+</div>
+</div>
+</body>
+</html>
